@@ -10,6 +10,10 @@
 #import "Person.h"
 #import "SinglePerson.h"
 #import "GCDSinglePerson.h"
+#import "SubPerson.h"
+
+#import "QFSubProxy.h"
+
 
 @interface ViewController ()
 
@@ -20,6 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self testNSObject];
+    NSLog(@"--------------------下面是NSProxy------------------------");
+    [self testNSProxy];
+
+}
+- (void)testNSObject {
     Person *p = [Person sharedPerson];
     Person *p2 = [[Person alloc]init];
     Person *p3 = [p copy];
@@ -37,12 +47,24 @@
     GCDSinglePerson *gcdPerson3 = [gcdPerson copy];
     NSLog(@"\np = %@\n, p2 = %@\n, p3 = %@", gcdPerson,gcdPerson2,gcdPerson3);
     
+    NSLog(@"--------------------------------------------");
+    SubPerson *subPerson = [SubPerson sharedPerson];
+    SubPerson *subPerson2 = [[SubPerson alloc]init];
+    SubPerson *subPerson3 = [subPerson copy];
+    NSLog(@"\np = %@\n, p2 = %@\n, p3 = %@", subPerson,subPerson2,subPerson3);
 }
 
-
-
-
-
+- (void)testNSProxy {
+    QFProxy *proxy = [QFProxy sharedPerson];
+    QFProxy *proxy2 = [QFProxy alloc];
+    NSLog(@"\np = %@\n, p2 = %@\n", proxy,proxy2);
+    
+    NSLog(@"--------------------------------------------");
+    
+    QFSubProxy *subProxy = [QFSubProxy sharedPerson];
+    QFSubProxy *subProxy2 = [QFSubProxy alloc];
+    NSLog(@"\np = %@\n, p2 = %@\n", subProxy,subProxy2);
+}
 
 
 @end

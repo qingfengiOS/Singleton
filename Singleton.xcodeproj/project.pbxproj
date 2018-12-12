@@ -18,6 +18,9 @@
 		8566F807202802F30078CDB2 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 8566F806202802F30078CDB2 /* Person.m */; };
 		8566F80A20280C5C0078CDB2 /* SinglePerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8566F80920280C5C0078CDB2 /* SinglePerson.m */; };
 		8566F80D20280E140078CDB2 /* GCDSinglePerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8566F80C20280E140078CDB2 /* GCDSinglePerson.m */; };
+		FDD9542821C0D83400B5879F /* SubPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9542721C0D83400B5879F /* SubPerson.m */; };
+		FDD9542B21C0F8AC00B5879F /* QFProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9542A21C0F8AC00B5879F /* QFProxy.m */; };
+		FDD9542E21C0F8FF00B5879F /* QFSubProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9542D21C0F8FF00B5879F /* QFSubProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,12 @@
 		8566F80920280C5C0078CDB2 /* SinglePerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinglePerson.m; sourceTree = "<group>"; };
 		8566F80B20280E140078CDB2 /* GCDSinglePerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDSinglePerson.h; sourceTree = "<group>"; };
 		8566F80C20280E140078CDB2 /* GCDSinglePerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDSinglePerson.m; sourceTree = "<group>"; };
+		FDD9542621C0D83400B5879F /* SubPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubPerson.h; sourceTree = "<group>"; };
+		FDD9542721C0D83400B5879F /* SubPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubPerson.m; sourceTree = "<group>"; };
+		FDD9542921C0F8AC00B5879F /* QFProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QFProxy.h; sourceTree = "<group>"; };
+		FDD9542A21C0F8AC00B5879F /* QFProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QFProxy.m; sourceTree = "<group>"; };
+		FDD9542C21C0F8FF00B5879F /* QFSubProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QFSubProxy.h; sourceTree = "<group>"; };
+		FDD9542D21C0F8FF00B5879F /* QFSubProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QFSubProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +132,14 @@
 				8566F806202802F30078CDB2 /* Person.m */,
 				8566F80820280C5C0078CDB2 /* SinglePerson.h */,
 				8566F80920280C5C0078CDB2 /* SinglePerson.m */,
+				FDD9542621C0D83400B5879F /* SubPerson.h */,
+				FDD9542721C0D83400B5879F /* SubPerson.m */,
 				8566F80B20280E140078CDB2 /* GCDSinglePerson.h */,
 				8566F80C20280E140078CDB2 /* GCDSinglePerson.m */,
+				FDD9542921C0F8AC00B5879F /* QFProxy.h */,
+				FDD9542A21C0F8AC00B5879F /* QFProxy.m */,
+				FDD9542C21C0F8FF00B5879F /* QFSubProxy.h */,
+				FDD9542D21C0F8FF00B5879F /* QFSubProxy.m */,
 			);
 			path = Singleton;
 			sourceTree = "<group>";
@@ -285,7 +300,10 @@
 				8566F80A20280C5C0078CDB2 /* SinglePerson.m in Sources */,
 				8566F807202802F30078CDB2 /* Person.m in Sources */,
 				8566F7D5202802BF0078CDB2 /* AppDelegate.m in Sources */,
+				FDD9542B21C0F8AC00B5879F /* QFProxy.m in Sources */,
 				8566F80D20280E140078CDB2 /* GCDSinglePerson.m in Sources */,
+				FDD9542821C0D83400B5879F /* SubPerson.m in Sources */,
+				FDD9542E21C0F8FF00B5879F /* QFSubProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DZK6T3AW3W;
 				INFOPLIST_FILE = Singleton/Info.plist;
@@ -462,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DZK6T3AW3W;
 				INFOPLIST_FILE = Singleton/Info.plist;

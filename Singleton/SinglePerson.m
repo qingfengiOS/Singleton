@@ -19,11 +19,13 @@ static id singlePerson;
  */
 + (void)load {
     singlePerson = [[self alloc]init];
+    
 }
 
 + (instancetype)allocWithZone:(struct _NSZone *)zone {
     if (singlePerson == nil) {
         singlePerson = [super allocWithZone:zone];
+//        singlePerson = [NSAllocateObject([self class], 0, NULL) init];
     }
     return singlePerson;
 }
